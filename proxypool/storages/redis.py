@@ -1,5 +1,5 @@
 import redis
-from exceptions.empty import PoolEmptyException
+from proxypool.exceptions.empty import PoolEmptyException
 import sys
 
 sys.path.append(".")
