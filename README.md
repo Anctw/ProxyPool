@@ -1,4 +1,4 @@
-##### 此项目为copy项目 原项目地址： https://github.com/Python3WebSpider/ProxyPool
+##### 此项目为学习项目 原项目地址： https://github.com/Python3WebSpider/ProxyPool
 
 # ProxyPool
 
