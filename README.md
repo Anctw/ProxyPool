@@ -1,9 +1,6 @@
-# ProxyPool
+##### 此项目为copy项目 原项目地址： https://github.com/Python3WebSpider/ProxyPool
 
-![build](https://github.com/Python3WebSpider/ProxyPool/workflows/build/badge.svg)
-![deploy](https://github.com/Python3WebSpider/ProxyPool/workflows/deploy/badge.svg)
-![](https://img.shields.io/badge/python-3.6%2B-brightgreen)
-![Docker Pulls](https://img.shields.io/docker/pulls/germey/proxypool)
+# ProxyPool
 
 简易高效的代理池，提供如下功能：
 
@@ -347,14 +344,5 @@ class Daili66Crawler(BaseCrawler):
 
 网页的爬取不需要实现，BaseCrawler 已经有了默认实现，如需更改爬取方式，重写 crawl 方法即可。
 
-欢迎大家多多发 Pull Request 贡献 Crawler，使其代理源更丰富强大起来。
 
-## 部署
 
-本项目提供了 Kubernetes 部署脚本，如需部署到 Kubernetes，请参考 [kubernetes](./kubernetes)。
-
-如有一起开发的兴趣可以在 Issue 留言，非常感谢！
-
-## LICENSE
-
-MIT
