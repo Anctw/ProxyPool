@@ -1,6 +1,6 @@
 from flask import Flask, g, request
 from proxypool.exceptions.empty import PoolEmptyException
-from proxypool.storages.redis import RedisClient
+from proxypool.storages.redisT import RedisClient
 from proxypool.setting import API_HOST, API_PORT, API_THREADED, API_KEY, IS_DEV, PROXY_RAND_KEY_DEGRADED
 import functools
 
