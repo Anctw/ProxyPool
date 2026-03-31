@@ -2,6 +2,8 @@ from proxypool.schemas.proxy import Proxy
 from proxypool.crawlers.base import BaseCrawler
 from pyquery import PyQuery as pq
 
+""" 网站无法访问 """
+
 BaseUrl = 'http://www.taiyanghttp.com/free/page{num}'
 MAX_PAGE = 3
 

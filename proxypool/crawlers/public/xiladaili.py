@@ -2,6 +2,8 @@ from proxypool.schemas.proxy import Proxy
 from proxypool.crawlers.base import BaseCrawler
 from lxml import etree
 
+""" 网站无法访问 """
+
 BASE_URL = "http://www.xiladaili.com/"
 MAX_PAGE = 5
 

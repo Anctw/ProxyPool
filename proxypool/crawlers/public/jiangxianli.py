@@ -2,6 +2,7 @@ from proxypool.schemas.proxy import Proxy
 from proxypool.crawlers.base import BaseCrawler
 import json
 
+""" 网站无法访问 """
 
 BASE_URL = 'https://ip.jiangxianli.com/api/proxy_ips?page={page}'
 

@@ -1,9 +1,10 @@
 from proxypool.schemas.proxy import Proxy
 from proxypool.crawlers.base import BaseCrawler
 from bs4 import BeautifulSoup
+from pyquery import PyQuery as pq
 import re
 
-"""网站可以访问 重写代码爬取成功"""
+""" 网站可以访问 重写代码爬取成功 """
 
 # MAX_NUM = 9999
 # BASE_URL = 'http://api.89ip.cn/tqdl.html?api=1&num={MAX_NUM}&port=&address=&isp='.format(MAX_NUM=MAX_NUM)
@@ -43,17 +44,25 @@ class Ip89Crawler(BaseCrawler):
         parse html file to get proxies
         :return:
         """
-        soup = BeautifulSoup(html, 'lxml')
-        tr_list = soup.find_all('tr')
-        for tr in tr_list:
-            tds = tr.find_all('td')
-            data_list = []
-            if len(tds) >= 2:
-                for td in tds:
-                    data_list.append(td.string.strip())
-                host = data_list[0]
-                port = data_list[1]
-                yield Proxy(host=host, port=port)
+        """ 方法一使用Beautiful4 """
+        # soup = BeautifulSoup(html, 'lxml')
+        # tr_list = soup.find_all('tr')
+        # for tr in tr_list:
+        #     tds = tr.find_all('td')
+        #     data_list = []
+        #     if len(tds) >= 2:
+        #         for td in tds:
+        #             data_list.append(td.string.strip())
+        #         host = data_list[0]
+        #         port = data_list[1]
+        #         yield Proxy(host=host, port=port)
+        """ 方法二使用PyQuery """
+        doc = pq(html)
+        for item in doc('tbody tr').items():
+            td_ip = item.find('td')[0].text.strip()
+            td_port = item.find('td')[1].text.strip()
+            if td_ip and td_port:
+                yield Proxy(host=td_ip, port=td_port)
 
 if __name__ == '__main__':
     crawler = Ip89Crawler()

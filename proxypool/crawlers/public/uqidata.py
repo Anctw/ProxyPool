@@ -3,6 +3,8 @@ from proxypool.schemas.proxy import Proxy
 from proxypool.crawlers.base import BaseCrawler
 from loguru import logger
 
+""" 网站无法访问 """
+
 BASE_URL = 'https://ip.uqidata.com/free/index.html'
 
 

@@ -3,6 +3,8 @@ from pyquery import PyQuery as pq
 from proxypool.schemas.proxy import Proxy
 from proxypool.crawlers.base import BaseCrawler
 
+""" 网站上无代理 """
+
 BASE_URL = "http://www.xsdaili.cn/"
 PAGE_BASE_URL = "http://www.xsdaili.cn/dayProxy/ip/{page}.html"
 MAX_PAGE = 3

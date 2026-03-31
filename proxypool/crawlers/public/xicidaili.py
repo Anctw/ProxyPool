@@ -3,6 +3,8 @@ from proxypool.schemas.proxy import Proxy
 from proxypool.crawlers.base import BaseCrawler
 from loguru import logger
 
+""" 网站上无代理 """
+
 BASE_URL = 'https://www.xicidaili.com/'
 
 

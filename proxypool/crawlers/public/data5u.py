@@ -3,7 +3,7 @@ from proxypool.schemas.proxy import Proxy
 from proxypool.crawlers.base import BaseCrawler
 from loguru import logger
 
-"""免费代理无了"""
+""" 免费代理无了 """
 
 BASE_URL = 'http://www.data5u.com'
 

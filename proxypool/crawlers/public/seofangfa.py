@@ -4,6 +4,8 @@ from pyquery import PyQuery as pq
 from proxypool.schemas.proxy import Proxy
 from proxypool.crawlers.base import BaseCrawler
 
+""" 网站无法访问 """
+
 requests.packages.urllib3.disable_warnings()
 BASE_URL = "https://proxy.seofangfa.com/"
 MAX_PAGE = 1

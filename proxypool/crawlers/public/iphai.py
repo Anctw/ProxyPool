@@ -2,6 +2,7 @@ from proxypool.crawlers.base import BaseCrawler
 from proxypool.schemas.proxy import Proxy
 import re
 
+""" 网站需要注册 """
 
 BASE_URL = 'http://www.iphai.com/'
 

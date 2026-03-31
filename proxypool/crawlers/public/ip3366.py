@@ -2,6 +2,7 @@ from proxypool.crawlers.base import BaseCrawler
 from proxypool.schemas.proxy import Proxy
 import re
 
+""" 服务响应代码status_code=521 没招了 """
 
 MAX_PAGE = 3
 BASE_URL = 'http://www.ip3366.net/free/?stype={stype}&page={page}'

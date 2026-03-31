@@ -3,7 +3,7 @@ from proxypool.crawlers.base import BaseCrawler
 import re
 import json
 
-"""网站无法访问"""
+""" 网站无法访问 """
 
 BASE_URL = 'http://proxylist.fatezero.org/proxy.list'
 
