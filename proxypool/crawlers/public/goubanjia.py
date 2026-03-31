@@ -3,6 +3,9 @@ from proxypool.crawlers.base import BaseCrawler
 import re
 from pyquery import PyQuery as pq
 import time
+
+"""网站无法访问"""
+
 BASE_URL = 'http://www.goubanjia.com/'
 
 

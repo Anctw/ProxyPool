@@ -2,6 +2,7 @@ from pyquery import PyQuery as pq
 from proxypool.schemas.proxy import Proxy
 from proxypool.crawlers.base import BaseCrawler
 
+"""网站无法访问"""
 
 BASE_URL = 'http://www.66ip.cn/{page}.html'
 MAX_PAGE = 3

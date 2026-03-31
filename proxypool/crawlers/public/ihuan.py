@@ -5,6 +5,7 @@ from pyquery import PyQuery as pq
 import time
 BASE_URL = 'https://ip.ihuan.me/today/{path}.html'
 
+""" 今日代理已不可用，貌似挂了 """
 
 class IhuanCrawler(BaseCrawler):
     """

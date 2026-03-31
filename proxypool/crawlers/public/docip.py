@@ -5,6 +5,8 @@ from proxypool.schemas.proxy import Proxy
 from proxypool.crawlers.base import BaseCrawler
 import json
 
+"""可以获取，获取的代理为 45.67.221.18:80:80  优化了一下"""
+
 BASE_URL = 'https://www.docip.net/data/free.json?t={date}'
 
 
@@ -24,8 +26,9 @@ class DocipCrawler(BaseCrawler):
             result = json.loads(html)
             proxy_list = result['data']
             for proxy_item in proxy_list:
-                host = proxy_item['ip']
-                port = host.split(':')[-1]
+                origin_host = proxy_item['ip']
+                host = proxy_item['ip'].split(':')[0]
+                port = origin_host.split(':')[-1]
                 yield Proxy(host=host, port=port)
         except json.JSONDecodeError:
             print("json.JSONDecodeError")

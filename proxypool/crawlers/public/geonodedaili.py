@@ -5,6 +5,8 @@ from proxypool.schemas.proxy import Proxy
 from proxypool.crawlers.base import BaseCrawler
 import json
 
+""" 网站无法访问 但这个api仍可以获取数据 """
+
 BASE_URL = 'https://proxylist.geonode.com/api/proxy-list?limit=500&page={page}&sort_by=lastChecked&sort_type=desc'
 MAX_PAGE = 18
 
